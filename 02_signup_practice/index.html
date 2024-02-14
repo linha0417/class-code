@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입 양식 me</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <div id="wrapper">
+  <header>
+    <nav class="menu">
+      <ul class="menu_left">
+        <li><a href="#">about</a></li>
+        <li><a href="#">products</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu menu_logo">
+      <img class="cloud" src="./cloud.png" alt="logo_image">
+    </div>
+    <nav class="menu">
+      <ul class="menu_right">
+        <li><a href="#">login</a></li>
+        <li><a href="#">join</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- ---------------------------------------------------- -->
+  <main>
+    <div id="container">
+      <h1>회원가입 양식</h1>
+      <!-- form 태그는 회원가입 양식부분에만 지정해야함 -->
+      <form> 
+        <table>
+          <tr>
+            <th>
+              <label class="required name" for="name">이름</label>
+            </th>
+            <td>
+            <input type="text" id="name" name="name" required>
+          </td>
+          </tr>
+            <tr>
+              <th><label class="required uesr_id" for="user_id">아이디</label></th>
+              <td>
+              <input type="text" id="user_id" name="user_id" required>
+              <button class="button_check">중복확인</button>
+            </td>
+          </tr>
+          <tr>
+            <th><label class="required password" for="password">비밀번호</label></th>
+          <td>
+            <input type="password" id="password" name="password" required><br>
+            <span class="message">
+              ※비밀번호는 <span class="red">문자, 숫자, 특수문자(!@#$%^&*)의 조합 10 ~ 16 자리</span>로 입력이 가능합니다.
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th><label class="required" for="check_password">비밀번호 확인</label></th>
+          <td>
+            <input type="password" id="check_password" name="check_password" required>
+          </td>
+        </tr>
+        <tr>
+          <th><label class="required email"  for="email">이메일</label></th>
+          <td>
+            <input type="text" id="email" name="email" requirede> @
+            <input type="text" id="address" name="address" required>
+            <select name="" id="">
+              <option selected>직접입력</option>
+              <option value="naver">naver.com</option>
+              <option value="gmail">gmail.com</option>
+              <option value="daum">daum.net</option>
+            </select>
+            <button class="button_check">이메일 중복확인</button>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="years">학년</label>
+            /
+            <label for="classroom">반</label>
+          </th>
+          <td>
+          <div class >
+            <!-- select 태그 선택 창 만드는 태그임. 
+            option태그를 같이 써줘야함.-->
+            <select name="years" id="yrs">
+              <!-- 선택 라인 선택못하게 selected disable로 옵션 바꿔줘야함 -->
+              <option slected disabled>선택</option>
+              <!-- value 선택창에 표시되는 값. -->
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            학년
+            <select name="classroom" id="cl">
+              <option selected disabled>선택</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            반
+          </div>
+          </td>
+        </tr>
+        </table>
+      </form>
+      
+      <div id="buttons" >
+      <button class="button button_reset" type="reset">초기화</button>
+      <button class="button button_submit " type="submit">회원가입</button>
+      </div>
+      <hr>
+    </div>
+  </main>
+  <footer>
+    <p>
+      상호: - | 대표: - | 개인정보관리책임자: - | 전화: <a href="tel:0000000000">00-000-0000</a> | 이메일: <a href="mailto:master@example.com">master@example.com</a> <br>
+      주소: - | 사업자등록번호: - |
+    </p>
+    <p>
+      <a href="#">사업자정보확인</a> | <a href="#">홈페이지 이용약관</a> | <a href="#">개인정보처리방침</a><br>
+      © copyright 2024 Cha minseong.
+    </p>
+  </footer>
+  </div>
+</body>
+</html>

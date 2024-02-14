@@ -1,0 +1,210 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas: "header" "main" "footer";
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  width: 100%;
+  background-color: aliceblue;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 1px 6px black;
+  position: fixed;
+}
+
+h1 {
+  font-size: 17px;
+}
+
+.menu_left {
+  display: flex;
+  
+}
+
+.menu_right {
+  display: flex;
+}
+
+.menu ul  {
+  display: flex;
+  line-height: 50px;
+  background-color: aliceblue;
+  list-style: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 800;
+  /* li에 쓰는 게 아니라 a태그에 직접적으로 써야한다  */
+}
+
+a:hover {
+  color: rgb(15, 77, 248);
+}
+
+ul li {
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  text-decoration: none;
+}
+
+.cloud {
+  height: 50px;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-areas: ". container .";
+  background-color:white;
+  height: 500px;
+  /* grid-template-areas을 지정 안해서 h1태그, 양식태그 분리되서 따로놀았음 */
+}
+
+
+#container {
+  grid-area: container;
+  align-items: center;
+  padding: 50px 0px;
+  /* 내부여백을 줘서 가려져 있는 회원가입 글씨를 내림 */
+}
+
+table {
+  border-top: 2px solid rgb(15, 77, 248);
+  width: 100%;
+  margin: 10px auto;
+  /* 상하10px 좌우자동 */
+}
+
+th {
+  font-size: 14px;
+  width: 15%;
+  text-align: right;
+  background-color: rgb(239, 250, 255);
+}
+
+tr {
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1.5px dotted rgb(15, 77, 248);
+
+}
+
+td { 
+  font-size: 12px;
+}
+
+/* .box {
+  background-color: white;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border: 2px solid rgb(76, 133, 255);
+  margin-left: 10px;
+  margin-right: 10px;
+} */
+
+input {
+  width: 100px
+}
+
+.message {
+  font-size: 9pt;
+}
+
+.red{
+  color: red;
+}
+
+/* 필수요소 */
+.required::before {
+  color: red;
+  content: "*";
+}
+
+.button_check {
+  cursor: pointer;
+  border: 1px solid rgb(76, 133, 255);
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgb(76, 133, 255);
+  margin: 1px 4px;
+  padding:2px 4px;
+  background-color: rgb(76, 133, 255);
+  color: white;
+}
+
+/* hover, active 선생님은 다른 방법 사용함. 참고 */
+.button_check:hover {
+  background-color: white;
+  color: rgb(76, 133, 255);
+}
+
+.button_check:active {
+  box-shadow: 1px 1px 4px rgb(58, 102, 197) inset;
+
+}
+
+.classbox {
+  width: 50px;
+}
+
+/* 버튼이 인라인요소라 부모요소 div에서
+display:flex, justify-content:center 적용함 */
+#buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  margin: 10px 10px;
+  border: 1px solid rgb(76, 133, 255);
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 1px 1px 4px rgb(76, 133, 255);
+  cursor: pointer;
+  color: rgb(76, 133, 255);
+
+}
+
+/* hover, active 선생님은 다른 방법 사용함. 참고 */
+.button:hover {
+  background-color: rgb(76, 133, 255);
+  color: white;
+}
+
+.button:active {
+  box-shadow: 1px 1px 4px blue inset;
+}
+
+/* grid-area: footer; 이름 설정 안해줘서 꼭대기에 붙어있었음 */
+footer {
+  height: 200px;
+  grid-area: footer;
+  background-color: rgb(76, 133, 255);
+  color: white;
+  
+}
+footer a {
+  color: white;
+}
+
+p {
+  text-align: center;
+  margin-top: 40px;
+}
